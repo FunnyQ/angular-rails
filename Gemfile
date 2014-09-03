@@ -26,6 +26,7 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'spring',        group: :development
 
 gem 'bower-rails'
+gem 'angular-rails-templates'
 
 gem "foreman"
 group :production, :staging do
