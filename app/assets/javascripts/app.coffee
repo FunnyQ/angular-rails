@@ -30,16 +30,22 @@ recipes = [
   },
   {
     id: 3
-    name: '香煎豆腐',
+    name: '鐵板豆腐',
   },
   {
     id: 4
-    name: '賽亞人咖哩飯',
+    name: '鐵板牛柳',
   },
 ]
 
-controllers = angular.module('controllers', [
-])
-controllers.controller('RecipesController', [ '$scope',
-  ($scope) ->
+controllers = angular.module('controllers',[])
+controllers.controller("RecipesController", [ '$scope', '$routeParams', '$location',
+  ($scope,$routeParams,$location)->
+    $scope.search = (keywords)->  $location.path("/").search('keywords',keywords)
+
+    if $routeParams.keywords
+      keywords = $routeParams.keywords.toLowerCase()
+      $scope.recipes = recipes.filter (recipe)-> recipe.name.toLowerCase().indexOf(keywords) != -1
+    else
+      $scope.recipes = []
 ])
