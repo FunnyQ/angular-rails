@@ -19,6 +19,25 @@ angularRails.config([ '$routeProvider',
         )
 ])
 
+recipes = [
+  {
+    id: 1
+    name: '紅燒豆腐'
+  },
+  {
+    id: 2
+    name: '麻婆豆腐',
+  },
+  {
+    id: 3
+    name: '香煎豆腐',
+  },
+  {
+    id: 4
+    name: '賽亞人咖哩飯',
+  },
+]
+
 controllers = angular.module('controllers', [
 ])
 controllers.controller('RecipesController', [ '$scope',
