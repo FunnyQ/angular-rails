@@ -14,7 +14,7 @@ angularRails.config([ '$routeProvider',
   ($routeProvider) ->
     $routeProvider
       .when('/',
-        templatesUrl: 'index.html'
+        templateUrl: 'index.html'
         controller: 'RecipesController'
         )
 ])
